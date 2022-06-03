@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       //bottomNavi 인스턴스로 올리기 위함 : InitBinding 만들어주기 (최초 필요한 컨트롤러들을 인스턴스로 올려줌)
       initialBinding: InitBinding(),
+      //app : bottomNavi + index
       home: const App(),
     );
   }

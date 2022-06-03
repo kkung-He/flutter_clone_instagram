@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clone_instagram/src/components/image_data.dart';
 import 'package:flutter_clone_instagram/src/controller/bottom_nav_controller.dart';
+import 'package:flutter_clone_instagram/src/pages/home.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 //getX
@@ -15,13 +16,14 @@ class App extends GetView<BottomNavController> {
       child: Obx(
         () => Scaffold(
           //backgroundColor: Colors.red,
-          appBar: AppBar(),
+          //appBar: AppBar(),
           body: IndexedStack(
             index: controller.pageIndex.value,
             children: [
-              Container(
-                child: Center(child: Text('HOME')),
-              ),
+              const Home(),
+              // Container(
+              //   child: Center(child: Text('HOME')),
+              // ),
               Container(
                 child: Center(child: Text('SEARCH')),
               ),
@@ -84,6 +86,7 @@ class App extends GetView<BottomNavController> {
       // onWillPop: () async {
       //   return false; //return 타입이 false면 닫지 않겠다 true : 앱 닫겠다.
       // },
+      //뒤로 가기 버튼 눌렀을 때 호출 (bool로 리턴)
       onWillPop: controller.willPopAction,
     );
   }
