@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clone_instagram/src/components/image_data.dart';
 import 'package:flutter_clone_instagram/src/controller/bottom_nav_controller.dart';
 import 'package:flutter_clone_instagram/src/pages/home.dart';
+import 'package:flutter_clone_instagram/src/pages/search.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 //getX
@@ -24,9 +25,7 @@ class App extends GetView<BottomNavController> {
               // Container(
               //   child: Center(child: Text('HOME')),
               // ),
-              Container(
-                child: Center(child: Text('SEARCH')),
-              ),
+              const Search(),
               Container(
                 child: Center(child: Text('UPLOAD')),
               ),
